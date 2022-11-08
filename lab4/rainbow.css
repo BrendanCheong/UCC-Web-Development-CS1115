@@ -1,0 +1,25 @@
+body, nav > ul > li + i {
+    background-color: lightgray;
+    color: blue;
+}
+
+b, a {
+    color: magenta;
+}
+
+nav > ul > li + li, #definition > p > em, p > .question > a {
+    color: yellow;
+}
+
+a, #bow > ul > li, p > .question > a, #definition > p > em  {
+    background-color: salmon;
+}
+
+h1:not(nav > h1), p > .question {
+    background-color: black;
+    color: white;
+}
+
+#bow > ul > li > b {
+    color: lightgray;
+}
