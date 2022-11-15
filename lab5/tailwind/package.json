@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "postcss-dropunusedvars": "^1.2.1"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0"
+  }
+}
