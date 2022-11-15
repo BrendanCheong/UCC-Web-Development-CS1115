@@ -12,7 +12,7 @@ nav > ul > li + li, #definition > p > em, p > .question > a {
 }
 
 a, #bow > ul > li, p > .question > a, #definition > p > em  {
-    background-color: salmon;
+    background-color: lightsalmon;
 }
 
 h1:not(nav > h1), p > .question {
