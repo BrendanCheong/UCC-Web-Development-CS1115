@@ -1,0 +1,207 @@
+@import 'base.css';
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(var(--color-slate-800) / var(--bg-opacity));
+    padding-left: var(--size-2);
+    padding-right: var(--size-2);
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--size-1);
+    padding-right: var(--size-1);
+    padding-top: var(--size-10);
+    padding-bottom: var(--size-10);
+}
+
+footer {
+    width: 95%;
+    color: rgb(var(--color-gray-300) / var(--text-opacity));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: var(--size-4);
+}
+
+/*
+nav header view
+*/
+header > h1 {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-8);
+    color: rgb(var(--color-gray-100) / var(--text-opacity));
+}
+
+header > p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-6);
+    font-weight: var(--font-weight-light);
+    color: rgb(var(--color-gray-300) / var(--text-opacity));
+}
+
+/*
+nav for deskstop view only
+*/
+.nav__section--desktop {
+    display: none;
+}
+
+.nav__section--desktop h2 {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-6);
+    color: rgb(var(--color-gray-300) / var(--text-opacity));
+    font-weight: var(--font-weight-normal);
+}
+
+/*
+nav for mobile view only
+*/
+.nav__section--mobile {
+    display: flex;
+    flex-direction: row;
+    padding-left: var(--size-3);
+    padding-right: var(--size-3);
+    margin-top: calc(var(--size-5) * -1);
+}
+
+.nav__section--mobile h2 {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-6);
+    font-weight: var(--font-weight-normal);
+    color: rgb(var(--color-gray-300) / var(--text-opacity));
+}
+
+/*
+Evenly space out the navigation headings in the mobile nav section
+*/
+.nav__section--mobile > * + * {
+    margin-left: var(--size-8);
+}
+
+.nav__section--icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: var(--size-2);
+    padding-bottom: var(--size-2);
+    margin-left: calc(var(--size-5) * -1);
+}
+
+/*
+Evenly space out the icons in the nav section
+*/
+.nav__section--icons > * + * {
+    margin-left: var(--size-8);
+}
+
+.nav__section--icons > h2 {
+    display: none;
+}
+
+.nav__section--icons a {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-6);
+    font-weight: var(--font-weight-normal);
+    color: rgb(var(--color-gray-300) / var(--text-opacity));
+}
+
+.nav__section--icons svg {
+    width: var(--size-5);
+    height: var(--size-5);
+}
+
+.footer__section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 85%;
+}
+
+.footer__section a {
+    display: flex;
+    margin-top: var(--size-4);
+    flex-direction: row;
+    align-items: center;
+    margin-right: var(--size-6);
+}
+
+.footer__section a:hover {
+    color: rgb(var(--color-amber-500) / var(--text-opacity));
+    transition-duration: 300ms;
+}
+
+.footer__section h2 {
+    margin-left: var(--size-2);
+    margin-right: var(--size-1);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-5);
+}
+
+.footer__section svg {
+    width: var(--size-4);
+    height: var(--size-4);
+}
+
+.footer__section--redirect {
+    width: var(--size-2)!important;
+    height: var(--size-2)!important;
+}
+
+.footer__section--copyright {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-4);
+    margin-top: var(--size-4);
+    color: rgb(var(--color-gray-500) / var(--text-opacity));
+}
+
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        padding-top: var(--size-20);
+        padding-bottom: var(--size-20);
+    }
+
+    .nav__section--desktop {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /*
+    Hide the mobile nav section for desktop view
+    */
+    .nav__section--mobile {
+        display: none;
+    }
+
+    /*
+    Evenly space out the navigation headings in the nav section for desktop view
+    */
+    .nav__section--desktop > * + * {
+        padding-left: var(--size-8);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer__section a {
+        margin-right: var(--size-10);
+    }
+}
