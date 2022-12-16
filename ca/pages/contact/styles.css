@@ -1,0 +1,14 @@
+@import '../../base.css';
+
+html {
+    height: 100%;
+    width: auto;
+    overflow: auto;
+    color: rgb(var(--color-gray-300) / var(--text-opacity));
+}
+
+body {
+    background-color: rgb(var(--color-slate-800) / var(--bg-opacity));
+    width: 100%;
+    height: 100%;
+}

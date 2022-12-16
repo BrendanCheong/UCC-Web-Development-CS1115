@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --color-black: 0 0 0;
     --color-white: 255 255 255;
@@ -277,13 +279,13 @@
     --width-7xl: 80rem;
     --width-prose: 65ch;
     --font-family-sans: ui-sans-serif, system-ui, -apple-system,
-      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-      sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-      "Noto Color Emoji";
+        BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
     --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times,
-      serif;
+        serif;
     --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-      "Liberation Mono", "Courier New", monospace;
+        "Liberation Mono", "Courier New", monospace;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
@@ -334,6 +336,24 @@
 }
 
 @layer base {
+
+    /* scrollbar styling */
+    ::-webkit-scrollbar {
+        width: var(--size-1);
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: rgb(var(--color-slate-800) / var(--bg-opacity));
+        -webkit-border-radius: var(--size-1);
+        border-radius: var(--size-1);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: var(--size-1);
+        border-radius: var(--size-1);
+        background: rgb(var(--color-slate-700) / var(--bg-opacity));
+    }
+
     *,
     ::before,
     ::after {
@@ -348,11 +368,18 @@
         -webkit-text-size-adjust: 100%;
         tab-size: 4;
         font-family: var(--font-family-sans);
+        height: 100%;
+        width: auto;
+        overflow: auto;
+        color: rgb(var(--color-gray-300) / var(--text-opacity));
     }
 
     body {
         margin: 0;
         line-height: inherit;
+        background-color: rgb(var(--color-slate-800) / var(--bg-opacity));
+        width: 100%;
+        height: 100%;
     }
 
     h1,
@@ -363,6 +390,10 @@
     h6 {
         font-size: inherit;
         font-weight: inherit;
+    }
+
+    h2.hide {
+        display: none;
     }
 
     /*
@@ -459,5 +490,206 @@
     button,
     [role="button"] {
         cursor: pointer;
+    }
+
+    header {
+        width: auto;
+    }
+
+    /*
+    nav header view
+    */
+    header > a > h1 {
+        font-weight: var(--font-weight-semibold) !important;
+        font-size: var(--font-size-2xl) !important;
+        line-height: var(--line-height-8);
+        color: rgb(var(--color-gray-100) / var(--text-opacity));
+    }
+
+    header > a > p {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-6);
+        font-weight: var(--font-weight-light);
+        color: rgb(var(--color-gray-300) / var(--bg-opacity));
+    }
+
+    nav {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--size-1);
+        padding-right: var(--size-1);
+        padding-top: var(--size-10);
+        padding-bottom: var(--size-10);
+    }
+
+    footer {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: var(--size-4);
+    }
+
+    #body__progressContainer {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: rgb(var(--color-slate-700) / var(--bg-opacity));
+        height: var(--size-1);
+        width: 100%;
+    }
+
+    #body__progressContainer--progressBar {
+        background-color: rgb(var(--color-amber-500) / var(--text-opacity));
+        height: var(--size-1);
+        width: 0%;
+    }
+
+    /*
+nav for deskstop view only
+*/
+    .nav__menu--desktop {
+        display: none;
+    }
+
+    .nav__menu--desktop h2 {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-6);
+        font-weight: var(--font-weight-normal);
+    }
+
+    /*
+nav for mobile view only
+*/
+    .nav__menu--mobile {
+        display: flex;
+        flex-direction: row;
+        padding-left: var(--size-3);
+        padding-right: var(--size-3);
+        margin-top: calc(var(--size-5) * -1);
+    }
+
+    .nav__menu--mobile h2 {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-6);
+        font-weight: var(--font-weight-normal);
+    }
+
+    /*
+Evenly space out the navigation headings in the mobile nav section
+*/
+    .nav__menu--mobile>*+* {
+        margin-left: var(--size-8);
+    }
+
+    .nav__menu--icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: var(--size-2);
+        padding-bottom: var(--size-2);
+        margin-left: calc(var(--size-5) * -1);
+    }
+
+    /*
+    Evenly space out the icons in the nav section
+    */
+    .nav__menu--icons>*+* {
+        margin-left: var(--size-8);
+    }
+
+    .nav__menu--icons a {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-6);
+        font-weight: var(--font-weight-normal);
+    }
+
+    .nav__menu--icons svg {
+        width: var(--size-5);
+        height: var(--size-5);
+    }
+
+    .footer__items {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 85%;
+    }
+
+    .footer__items a {
+        display: flex;
+        margin-top: var(--size-4);
+        flex-direction: row;
+        align-items: center;
+        margin-right: var(--size-6);
+    }
+
+    .footer__items a:hover {
+        color: rgb(var(--color-amber-500) / var(--text-opacity));
+        transition-duration: 300ms;
+    }
+
+    .footer__items h2 {
+        margin-left: var(--size-2);
+        margin-right: var(--size-1);
+        font-size: var(--font-size-sm);
+        line-height: var(--line-height-5);
+    }
+
+    .footer__items svg {
+        width: var(--size-4);
+        height: var(--size-4);
+    }
+
+    .footer__items--redirect {
+        width: var(--size-2) !important;
+        height: var(--size-2) !important;
+    }
+
+    .footer__items--copyright {
+        font-size: var(--font-size-xs);
+        line-height: var(--line-height-4);
+        margin-top: var(--size-4);
+        color: rgb(var(--color-gray-500) / var(--text-opacity));
+    }
+
+    @media (min-width: 768px) {
+        nav {
+            flex-direction: row;
+            padding-top: var(--size-20);
+            padding-bottom: var(--size-20);
+        }
+
+        .nav__menu--desktop {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /*
+        Hide the mobile nav section for desktop view
+        */
+        .nav__menu--mobile {
+            display: none;
+        }
+
+        /*
+        Evenly space out the navigation headings in the nav section for desktop view
+        */
+        .nav__menu--desktop>*+* {
+            padding-left: var(--size-8);
+        }
+
+    }
+
+    @media (min-width: 1024px) {
+        .footer__items a {
+            margin-right: var(--size-10);
+        }
     }
 }
