@@ -6,6 +6,11 @@ main {
     max-width: fit-content;
 }
 
+img {
+    width: 80px;
+    height: 80px;
+}
+
 #introduction {
     top: var(--size-0);
     overflow: hidden;
@@ -44,6 +49,53 @@ Evenly space out the 2 paragraphs
     border-radius: var(--border-radius-md);
 }
 
+#about > a {
+    background-color:rgb(var(--color-slate-600) / var(--bg-opacity));
+    border-radius: var(--border-radius-md);
+    padding: var(--size-2) var(--size-2) var(--size-3) var(--size-3);
+    transition-duration: 300ms;
+}
+
+#about > a:hover {
+    background-color: rgb(var(--color-teal-600) / var(--bg-opacity));
+}
+
+#about a > section {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+}
+
+#about svg {
+    margin-left: var(--size-2);
+    width: var(--size-5);
+}
+
+#content {
+    padding-right: var(--size-2);
+    margin: 0 var(--size-16) var(--size-4) var(--size-4);
+    width: 100%;
+}
+
+#projects, #skills {
+    padding-top: var(--size-16);
+}
+
+#skills ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: var(--size-8);
+    width: 100%;
+} 
+
+#skills ul li {
+    margin: var(--size-4) var(--size-4) var(--size-4) var(--size-4);
+    height: var(--size-20);
+    width: var(--size-20);
+}
+
 .main__introduction--title {
     font-size: var(--font-size-5xl);
     font-weight: var(--font-weight-semibold);
@@ -77,8 +129,45 @@ Evenly space out the 2 paragraphs
     margin-bottom: var(--size-4);
 }
 
-@media (min-width: 640px) {
+.main__content--card {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: var(--size-56);
+    background-color: rgb(var(--color-slate-700) / var(--bg-opacity));
+    margin-bottom: var(--size-2);
+    padding: var(--size-10) var(--size-10) var(--size-8) var(--size-8);
+    border-radius: var(--border-radius-lg);
+    transition: transform 200ms;
+    box-shadow: 0 10px 15px 2px rgb(0 0 0 / 0.1), 0 4px 6px 3px rgb(0 0 0 / 0.1);
+}
 
+.main__content--card:hover {
+    transform: scale(1.10);
+}
+
+.main__content--card h2 {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-4);
+    text-transform: uppercase;
+}
+
+.main__content--card h3 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-7);
+    margin-bottom: var(--size-4);
+}
+
+.main__content--card p {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-5);
+}
+
+@media (min-width: 640px) {
+    .main__content--card {
+        min-height:var(--size-48);
+    }
 }
 
 @media (min-width: 768px) {
@@ -87,8 +176,13 @@ Evenly space out the 2 paragraphs
         padding: 0 0 var(--size-16) var(--size-16);
     }
 
-    .about {
+    #about {
         width: 75%;
+    }
+
+    #content {
+        padding-left: var(--size-8);
+        padding-right: var(--size-8);
     }
 }
 
@@ -102,11 +196,36 @@ Evenly space out the 2 paragraphs
         position: sticky;
         width: 50%;
         height: 100vh;
+        padding-top: var(--size-14);
         padding-left: var(--size-16);
         padding-right: var(--size-0);
     }
 
-    .about {
+    #about {
         width: 100%;
     }
+
+    #content {
+        width: 50%;
+        margin: 0 0 var(--size-12) var(--size-12);
+    }
+
+    .main__content--card {
+        padding-left: var(--size-10);
+        padding-right: var(--size-10);
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .main__content--card {
+        padding-left: var(--size-12);
+        padding-right: var(--size-12);
+    }
+
+    .main__content--card h3 {
+        font-size: var(--font-size-2xl);
+        line-height: var(--line-height-8);
+    }
+
 }

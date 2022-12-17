@@ -333,6 +333,10 @@
     --border-radius-full: 9999px;
     --text-opacity: 1;
     --bg-opacity: 1;
+    --ring-offset-shadow: 0 0 #0000;
+    --ring-shadow: 0 0 #0000;
+    --shadow: 0 0 #0000;
+    --shadow-colored: 0 0 #0000;
 }
 
 @layer base {
@@ -363,14 +367,15 @@
         border-color: rgb(var(--color-gray-200) / 1);
     }
 
+    @viewport {
+        width: device-width;
+    }
+
     html {
         line-height: 1.5;
         -webkit-text-size-adjust: 100%;
         tab-size: 4;
         font-family: var(--font-family-sans);
-        height: 100%;
-        width: auto;
-        overflow: auto;
         color: rgb(var(--color-gray-300) / var(--text-opacity));
     }
 
@@ -378,8 +383,13 @@
         margin: 0;
         line-height: inherit;
         background-color: rgb(var(--color-slate-800) / var(--bg-opacity));
+    }
+
+    html, body {
         width: 100%;
         height: 100%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
     }
 
     h1,
@@ -395,10 +405,6 @@
     h2.hide {
         display: none;
     }
-
-    /*
-    Reset links to optimize for opt-in styling instead of opt-out.
-    */
 
     a {
         color: inherit;
@@ -429,7 +435,6 @@
         line-height: inherit;
         color: inherit;
         margin: 0;
-
         padding: 0;
     }
 
@@ -496,6 +501,10 @@
         width: auto;
     }
 
+    section {
+        scroll-margin-top: var(--size-24);
+    }
+
     /*
     nav header view
     */
@@ -532,28 +541,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: var(--size-4);
-    }
-
-    #body__progressContainer {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1;
-        background-color: rgb(var(--color-slate-700) / var(--bg-opacity));
-        height: var(--size-1);
-        width: 100%;
-    }
-
-    #body__progressContainer--progressBar {
-        background-color: rgb(var(--color-amber-500) / var(--text-opacity));
-        height: var(--size-1);
-        width: 0%;
+        padding: var(--size-2);
     }
 
     /*
-nav for deskstop view only
-*/
+    nav for deskstop view only
+    */
     .nav__menu--desktop {
         display: none;
     }
@@ -565,8 +558,8 @@ nav for deskstop view only
     }
 
     /*
-nav for mobile view only
-*/
+    nav for mobile view only
+    */
     .nav__menu--mobile {
         display: flex;
         flex-direction: row;
@@ -582,8 +575,8 @@ nav for mobile view only
     }
 
     /*
-Evenly space out the navigation headings in the mobile nav section
-*/
+    Evenly space out the navigation headings in the mobile nav section
+    */
     .nav__menu--mobile>*+* {
         margin-left: var(--size-8);
     }
@@ -613,6 +606,11 @@ Evenly space out the navigation headings in the mobile nav section
     .nav__menu--icons svg {
         width: var(--size-5);
         height: var(--size-5);
+    }
+
+    .nav__menu--icons svg:hover {
+        color: rgb(var(--color-amber-500) / var(--text-opacity));
+        transition-duration: 300ms;
     }
 
     .footer__items {
@@ -666,6 +664,10 @@ Evenly space out the navigation headings in the mobile nav section
             padding-bottom: var(--size-20);
         }
 
+        footer {
+            padding: var(--size-4);
+        }
+
         .nav__menu--desktop {
             display: flex;
             flex-direction: row;
@@ -688,6 +690,11 @@ Evenly space out the navigation headings in the mobile nav section
     }
 
     @media (min-width: 1024px) {
+
+        footer {
+            padding: var(--size-8);
+        }
+
         .footer__items a {
             margin-right: var(--size-10);
         }
