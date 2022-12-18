@@ -46,7 +46,7 @@ h3 {
     line-height: var(--line-height-7);
     font-weight: var(--font-weight-semibold);
     color: rgb(var(--color-gray-300) / var(--text-opacity));
-    font-family: Poppins, Roboto, sans-serif;
+    font-family: Poppins, Roboto, var(--font-family-sans);
 }
 
 p {

@@ -100,12 +100,12 @@ Evenly space out the 2 paragraphs
     font-size: var(--font-size-5xl);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-tight);
-    font-family: Poppins, Roboto, sans-serif;
+    font-family: Poppins, Roboto, var(--font-family-sans);
 }
 
 .main__content--title {
     margin: 0 0 var(--size-4);
-    font-family: Poppins, Roboto, sans-serif;
+    font-family: Poppins, Roboto, var(--font-family-sans);
     font-size: var(--font-size-5xl);
     line-height: var(--line-height-10);
     font-weight: var(--font-weight-extrabold);

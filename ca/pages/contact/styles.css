@@ -1,2 +1,172 @@
-@import '../../base.css';
+@import "../../base.css";
 
+main h2 {
+    font-size: var(--font-size-5xl);
+    line-height: var(--line-height-none);
+    max-width: var(--width-6xl);
+    margin-left: auto;
+    margin-right: auto;
+    height: var(--size-52);
+    color: rgb(var(--color-gray-500) / var(--text-opacity));
+    font-weight: var(--font-weight-bold);
+    padding-top: var(--size-12);
+    padding-bottom: var(--size-12);
+    text-align: center;
+}
+
+main svg {
+    width: var(--size-4);
+    height: var(--size-4);
+}
+
+main h3 {
+    color: rgb(var(--bg-stone-50) / var(--text-opacity));
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-8);
+    font-family: Poppins, Roboto, var(--font-family-sans);
+}
+
+main h4 {
+    color: rgb(var(--color-gray-50) / var(--text-opacity));
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-5);
+}
+
+main p {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-6);
+    color: rgb(var(--color-gray-200) / var(--text-opacity));
+    margin-top: var(--size-2);
+}
+
+form {
+    background-color: rgb(var(--color-slate-100) / var(--bg-opacity));
+    color: rgb(var(--color-slate-800) / var(--text-opacity));
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: column;
+    padding: var(--size-4);
+}
+
+label {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-5);
+    color: rgb(var(--color-slate-600) / var(--text-opacity));
+    margin: var(--size-4) var(--size-2) var(--size-2) var(--size-4);
+}
+
+input,
+textarea {
+    border-radius: var(--border-radius-md);
+    border-width: 1px;
+    margin-top: var(--size-2);
+    padding: var(--size-2) var(--size-1) var(--size-2) var(--size-1) !important;
+    margin-left: var(--size-4);
+    margin-right: var(--size-4);
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 2px 2px 2px 2px 2px
+        rgb(var(--color-slate-600) / var(--ring-opacity));
+    border-style: none;
+}
+
+button {
+    background-color: rgb(var(--color-slate-600) / var(--bg-opacity));
+    color: rgb(var(--color-slate-50) / var(--text-opacity));
+    border-radius: var(--border-radius-md);
+    width: 50%;
+    margin-left: var(--size-4);
+    margin-right: var(--size-4);
+    margin-top: var(--size-8);
+    padding-top: var(--size-2);
+    padding-bottom: var(--size-2);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-4);
+    font-weight: var(--font-weight-bold);
+    transition-duration: 300ms;
+}
+
+button:hover {
+    background-color: rgb(var(--color-slate-800) / var(--bg-opacity));
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    max-width: var(--width-6xl);
+    margin: calc(var(--size-4) * -1) auto var(--size-20) auto;
+    gap: var(--size-4);
+    position: relative;
+    z-index: 10;
+    border-radius: var(--border-radius-md);
+    background-color: rgb(var(--color-slate-900) / var(--bg-opacity));
+    padding: var(--size-4);
+}
+
+.grid_container__column {
+    margin-top: var(--size-20);
+    margin-bottom: var(--size-20);
+    display: inline-flex;
+    flex-direction: column;
+    padding: var(--size-4);
+}
+
+/*
+space out the elements evenly
+*/
+.grid_container__column > * + * {
+    margin-top: var(--size-2);
+}
+
+.grid_container__column--contact {
+    padding-top: var(--size-8);
+    padding-bottom: var(--size-8);
+    color: rgb(var(--color-slate-400) / var(--text-opacity));
+}
+
+.grid_container__column--contact section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--size-4);
+    border-radius: var(--border-radius-md);
+    border-width: 1px;
+    border-color: rgb(var(--color-slate-900) / var(--border-opacity));
+}
+
+.grid_container__column--contact section:hover {
+    border-width: 1px;
+    border-color: rgb(var(--color-slate-500) / var(--border-opacity));
+    transition-duration: 300ms;
+}
+
+/*
+space out the contact elements evenly
+*/
+.grid_container__column--contact section > * + * {
+    margin-left: var(--size-6);
+}
+
+@media (min-width: 768px) {
+    main h2 {
+        font-size: var(--font-size-9xl);
+        line-height: var(--line-height-none);
+        text-align: left;
+    }
+
+    .grid_container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: var(--size-2);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid_container {
+        padding: var(--size-16);
+    }
+}

@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
+    /*
+    Colors
+    */
     --color-black: 0 0 0;
     --color-white: 255 255 255;
     --color-slate-50: 248 250 252;
@@ -53,26 +56,6 @@
     --color-stone-700: 68 64 60;
     --color-stone-800: 41 37 36;
     --color-stone-900: 28 25 23;
-    --color-red-50: 254 242 242;
-    --color-red-100: 254 226 226;
-    --color-red-200: 254 202 202;
-    --color-red-300: 252 165 165;
-    --color-red-400: 248 113 113;
-    --color-red-500: 239 68 68;
-    --color-red-600: 220 38 38;
-    --color-red-700: 185 28 28;
-    --color-red-800: 153 27 27;
-    --color-red-900: 127 29 29;
-    --color-orange-50: 255 247 237;
-    --color-orange-100: 255 237 213;
-    --color-orange-200: 254 215 170;
-    --color-orange-300: 253 186 116;
-    --color-orange-400: 251 146 60;
-    --color-orange-500: 249 115 22;
-    --color-orange-600: 234 88 12;
-    --color-orange-700: 194 65 12;
-    --color-orange-800: 154 52 18;
-    --color-orange-900: 124 45 18;
     --color-amber-50: 255 251 235;
     --color-amber-100: 254 243 199;
     --color-amber-200: 253 230 138;
@@ -93,36 +76,6 @@
     --color-yellow-700: 161 98 7;
     --color-yellow-800: 133 77 14;
     --color-yellow-900: 113 63 18;
-    --color-lime-50: 247 254 231;
-    --color-lime-100: 236 252 203;
-    --color-lime-200: 217 249 157;
-    --color-lime-300: 190 242 100;
-    --color-lime-400: 163 230 53;
-    --color-lime-500: 132 204 22;
-    --color-lime-600: 101 163 13;
-    --color-lime-700: 77 124 15;
-    --color-lime-800: 63 98 18;
-    --color-lime-900: 54 83 20;
-    --color-green-50: 240 253 244;
-    --color-green-100: 220 252 231;
-    --color-green-200: 187 247 208;
-    --color-green-300: 134 239 172;
-    --color-green-400: 74 222 128;
-    --color-green-500: 34 197 94;
-    --color-green-600: 22 163 74;
-    --color-green-700: 21 128 61;
-    --color-green-800: 22 101 52;
-    --color-green-900: 20 83 45;
-    --color-emerald-50: 236 253 245;
-    --color-emerald-100: 209 250 229;
-    --color-emerald-200: 167 243 208;
-    --color-emerald-300: 110 231 183;
-    --color-emerald-400: 52 211 153;
-    --color-emerald-500: 16 185 129;
-    --color-emerald-600: 5 150 105;
-    --color-emerald-700: 4 120 87;
-    --color-emerald-800: 6 95 70;
-    --color-emerald-900: 6 78 59;
     --color-teal-50: 240 253 250;
     --color-teal-100: 204 251 241;
     --color-teal-200: 153 246 228;
@@ -133,92 +86,10 @@
     --color-teal-700: 15 118 110;
     --color-teal-800: 17 94 89;
     --color-teal-900: 19 78 74;
-    --color-cyan-50: 236 254 255;
-    --color-cyan-100: 207 250 254;
-    --color-cyan-200: 165 243 252;
-    --color-cyan-300: 103 232 249;
-    --color-cyan-400: 34 211 238;
-    --color-cyan-500: 6 182 212;
-    --color-cyan-600: 8 145 178;
-    --color-cyan-700: 14 116 144;
-    --color-cyan-800: 21 94 117;
-    --color-cyan-900: 22 78 99;
-    --color-sky-50: 240 249 255;
-    --color-sky-100: 224 242 254;
-    --color-sky-200: 186 230 253;
-    --color-sky-300: 125 211 252;
-    --color-sky-400: 56 189 248;
-    --color-sky-500: 14 165 233;
-    --color-sky-600: 2 132 199;
-    --color-sky-700: 3 105 161;
-    --color-sky-800: 7 89 133;
-    --color-sky-900: 12 74 110;
-    --color-blue-50: 239 246 255;
-    --color-blue-100: 219 234 254;
-    --color-blue-200: 191 219 254;
-    --color-blue-300: 147 197 253;
-    --color-blue-400: 96 165 250;
-    --color-blue-500: 59 130 246;
-    --color-blue-600: 37 99 235;
-    --color-blue-700: 29 78 216;
-    --color-blue-800: 30 64 175;
-    --color-blue-900: 30 58 138;
-    --color-indigo-50: 238 242 255;
-    --color-indigo-100: 224 231 255;
-    --color-indigo-200: 199 210 254;
-    --color-indigo-300: 165 180 252;
-    --color-indigo-400: 129 140 248;
-    --color-indigo-500: 99 102 241;
-    --color-indigo-600: 79 70 229;
-    --color-indigo-700: 67 56 202;
-    --color-indigo-800: 55 48 163;
-    --color-indigo-900: 49 46 129;
-    --color-violet-50: 245 243 255;
-    --color-violet-100: 237 233 254;
-    --color-violet-200: 221 214 254;
-    --color-violet-300: 196 181 253;
-    --color-violet-400: 167 139 250;
-    --color-violet-500: 139 92 246;
-    --color-violet-600: 124 58 237;
-    --color-violet-700: 109 40 217;
-    --color-violet-800: 91 33 182;
-    --color-violet-900: 76 29 149;
-    --color-pink-50: 253 242 248;
-    --color-pink-100: 252 231 243;
-    --color-pink-200: 251 207 232;
-    --color-pink-300: 249 168 212;
-    --color-pink-400: 244 114 182;
-    --color-pink-500: 236 72 153;
-    --color-pink-600: 219 39 119;
-    --color-pink-700: 190 24 93;
-    --color-pink-800: 157 23 77;
-    --color-pink-900: 131 24 67;
-    --color-rose-50: 255 241 242;
-    --color-rose-100: 255 228 230;
-    --color-rose-200: 254 205 211;
-    --color-rose-300: 253 164 175;
-    --color-rose-400: 251 113 133;
-    --color-rose-500: 244 63 94;
-    --color-rose-600: 225 29 72;
-    --color-rose-700: 190 18 60;
-    --color-rose-800: 159 18 57;
-    --color-rose-900: 136 19 55;
-    --color-primary-50: 239 246 255;
-    --color-primary-100: 219 234 254;
-    --color-primary-200: 191 219 254;
-    --color-primary-300: 147 197 253;
-    --color-primary-400: 96 165 250;
-    --color-primary-500: 59 130 246;
-    --color-primary-600: 37 99 235;
-    --color-primary-700: 29 78 216;
-    --color-primary-800: 30 64 175;
-    --color-primary-900: 30 58 138;
-    --color-primary: 48 86 211;
     --size--negative-2: -0.5rem;
     --size-negative-1: -0.25rem;
     --size-0: 0px;
     --size-1: 0.25rem;
-    --size-1_5: 0.375rem;
     --size-2: 0.5rem;
     --size-3: 0.75rem;
     --size-4: 1rem;
@@ -264,9 +135,13 @@
     --width-10: 10;
     --width-11: 11;
     --width-12: 12;
-    --width-auto: auto;
-    --width-3xs: 16rem;
-    --width-2xs: 18rem;
+    /*
+    xs: extra-small
+    sm: small
+    md: medium
+    lg: large
+    xl: extra-large
+    */
     --width-xs: 20rem;
     --width-sm: 24rem;
     --width-md: 28rem;
@@ -280,7 +155,7 @@
     --width-7xl: 80rem;
     --width-prose: 65ch;
     --font-family-sans: ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+        BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans",
         sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
     --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times,
@@ -345,7 +220,6 @@
 }
 
 @layer base {
-
     /* scrollbar styling */
     ::-webkit-scrollbar {
         width: var(--size-1);
@@ -369,7 +243,7 @@
         box-sizing: border-box;
         border-width: 0;
         border-style: solid;
-        border-color: rgb(var(--color-gray-200) / 1);
+        border-color: rgb(var(--color-slate-200) / 1);
     }
 
     @viewport {
@@ -390,7 +264,8 @@
         background-color: rgb(var(--color-slate-800) / var(--bg-opacity));
     }
 
-    html, body {
+    html,
+    body {
         width: 100%;
         height: 100%;
         overflow-x: hidden;
@@ -407,7 +282,9 @@
         font-weight: inherit;
     }
 
-    h2.hide {
+    h2.hide,
+    h3.hide,
+    h4.hide {
         display: none;
     }
 
@@ -439,8 +316,6 @@
         font-weight: inherit;
         line-height: inherit;
         color: inherit;
-        margin: 0;
-        padding: 0;
     }
 
     button,
@@ -474,15 +349,6 @@
     p,
     pre {
         margin: 0;
-    }
-
-    fieldset {
-        margin: 0;
-        padding: 0;
-    }
-
-    legend {
-        padding: 0;
     }
 
     ol,
@@ -582,7 +448,7 @@
     /*
     Evenly space out the navigation headings in the mobile nav section
     */
-    .nav__menu--mobile>*+* {
+    .nav__menu--mobile > * + * {
         margin-left: var(--size-8);
     }
 
@@ -598,7 +464,7 @@
     /*
     Evenly space out the icons in the nav section
     */
-    .nav__menu--icons>*+* {
+    .nav__menu--icons > * + * {
         margin-left: var(--size-8);
     }
 
@@ -688,14 +554,12 @@
         /*
         Evenly space out the navigation headings in the nav section for desktop view
         */
-        .nav__menu--desktop>*+* {
+        .nav__menu--desktop > * + * {
             padding-left: var(--size-8);
         }
-
     }
 
     @media (min-width: 1024px) {
-
         footer {
             padding: var(--size-8);
         }
