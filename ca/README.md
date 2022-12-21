@@ -1,0 +1,3 @@
+# Continuous Assessment
+
+My CA topic is a Personal Portfolio Website. No javascript was used in this project, only HTML and CSS. There are 3 pages, the front-page, Contact page and the Experience page. The front-page is a brief introduction to myself and my skills. The Contact page is a form that allows the user to send me a message. The Experience page is a list of my work and education experience. The website is fully responsive and works on all devices. The website is hosted on the UCC web servers and can be found [here](https://cs1.ucc.ie/~bcej1/ca/index.html).
