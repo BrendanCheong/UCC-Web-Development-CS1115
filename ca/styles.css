@@ -147,13 +147,14 @@ Evenly space out the 2 paragraphs
     transform: scale(1.10);
 }
 
-.main__content--card h2 {
+.main__content--card h3 {
     font-size: var(--font-size-xs);
     line-height: var(--line-height-4);
     text-transform: uppercase;
 }
 
-.main__content--card h3 {
+.main__content--card h2 {
+    font-family: Poppins, Roboto, var(--font-family-sans);
     font-size: var(--font-size-xl);
     line-height: var(--line-height-7);
     margin-bottom: var(--size-4);
@@ -223,7 +224,7 @@ Evenly space out the 2 paragraphs
         padding-right: var(--size-12);
     }
 
-    .main__content--card h3 {
+    .main__content--card h2 {
         font-size: var(--font-size-2xl);
         line-height: var(--line-height-8);
     }

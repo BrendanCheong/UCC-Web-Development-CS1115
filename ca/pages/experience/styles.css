@@ -20,18 +20,7 @@ li {
     margin-bottom: var(--size-10);
 }
 
-circle {
-    position: absolute;
-    width: var(--size-3);
-    height: var(--size-3);
-    background-color: rgb(var(--color-amber-500) / var(--bg-opacity));
-    border-radius: var(--border-radius-full);
-    left: calc(var(--size-1_5) * -1);
-    border-width: 1px;
-    border-color: rgb(var(--color-slate-800) / var(--border-opacity));
-}
-
-main h2 {
+main h3 {
     margin-bottom: var(--size-1);
     font-size: var(--font-size-sm);
     line-height: var(--line-height-5);
@@ -41,7 +30,20 @@ main h2 {
     text-transform: uppercase;
 }
 
-h3 {
+main h3::before {
+    content: "";
+    position: absolute;
+    width: var(--size-3);
+    height: var(--size-3);
+    background-color: rgb(var(--color-amber-500) / var(--bg-opacity));
+    border-radius: var(--border-radius-full);
+    left: calc(var(--size-1_5) * -1);
+    border-width: 1px;
+    border-color: rgb(var(--color-slate-800) / var(--border-opacity));
+    shape-outside: circle();
+}
+
+main h2 {
     font-size: var(--font-size-lg);
     line-height: var(--line-height-7);
     font-weight: var(--font-weight-semibold);
